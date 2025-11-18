@@ -1,6 +1,6 @@
 import numpy as np
 
-print("🧠 CONSCIOUSCODE - NUMPY BRAIN SIMULATION TEST")
+print("CONSCIOUSCODE - NUMPY BRAIN SIMULATION TEST")
 print("=" * 50)
 
 # 1. Create artificial neurons (arrays)
@@ -15,8 +15,9 @@ print(f"   Bias: {bias}")
 
 # 2. Simulate a single neuron calculation
 print("\n2. SINGLE NEURON CALCULATION:")
-neuron_output = np.dot(inputs, weights) + bias
-print(f"   Neuron output: {neuron_output:.3f}")
+neuron_output = np.dot(inputs, weights) + bias  # .dot Matrix multiplication (how neurons connect)
+print(f"   Neuron output: {neuron_output:.3f}") # np.dot() = How neurons talk to each other
+
 
 # 3. Create multiple neurons (neural layer)
 print("\n3. NEURAL LAYER SIMULATION:")
@@ -41,7 +42,7 @@ print(f"   Layer output:\n{layer_output}")
 
 # 5. Apply activation function (sigmoid)
 print("\n4. ACTIVATION FUNCTION (SIGMOID):")
-activated_output = 1 / (1 + np.exp(-layer_output))
+activated_output = 1 / (1 + np.exp(-layer_output))  #np.dot() = How neurons talk to each other
 print(f"   Activated output:\n{activated_output}")
 
 # 6. Basic operations
@@ -50,5 +51,20 @@ print(f"   Max activation: {np.max(activated_output):.3f}")
 print(f"   Min activation: {np.min(activated_output):.3f}") 
 print(f"   Mean activation: {np.mean(activated_output):.3f}")
 
-print("\n🎉 NUMPY TEST SUCCESSFUL!")
-print("   Your brain simulation tools are working! 🧠")
+print("\n NUMPY TEST SUCCESSFUL!")
+print("   Your brain simulation tools are working!")
+
+# Real Use: Create blank neural layers or bias terms
+biases = np.zeros((1, 5))    # 5 neurons, no initial bias
+weights = np.ones((3, 2))    # All connections start at strength 1
+
+print(f"\n   Blank biases shape: {biases}") # with out shape the out  Blank biases shape: [[0. 0. 0. 0. 0.]]
+print(f"  \n Initial weights shape: {weights.shape}") # with ih .shape the out  Initial weights shape: (3, 2)
+print(f"  \n Initial weights : {weights}") # Initial weights shape: [[1. 1.]
+                                                                     # [1. 1.]
+                                                                     # [1. 1.]]
+
+# Real Use: Initialize random synaptic strengths
+np.random.seed(42)  # For reproducible results
+synaptic_weights = np.random.randn(4, 3) * 0.1  # Small random values 4(down) and 3(across/side (wedemon))
+print(f"Random neural connections:\n{synaptic_weights}")                                                                     

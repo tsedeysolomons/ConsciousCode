@@ -15,22 +15,22 @@ def check_package(package_name, import_name=None):
     try:
         module = __import__(import_name)
         version = getattr(module, '__version__', 'Unknown version')
-        print(f"✅ {package_name}: {version}")
+        print(f"{package_name}: {version}")
         return True
     except ImportError:
-        print(f"❌ {package_name}: NOT INSTALLED")
+        print(f"{package_name}: NOT INSTALLED")
         return False
 
 def main():
-    print("🧠 CONSCIOUSCODE - ENVIRONMENT SETUP")
+    print("CONSCIOUSCODE - ENVIRONMENT SETUP")
     print("=" * 50)
     
     # Check Python version
     python_version = sys.version_info
-    print(f"✅ Python: {python_version.major}.{python_version.minor}.{python_version.micro}")
+    print(f"Python: {python_version.major}.{python_version.minor}.{python_version.micro}")
     
     if python_version.major < 3 or (python_version.major == 3 and python_version.minor < 8):
-        print("❌ Python 3.8 or higher is required!")
+        print("Python 3.8 or higher is required!")
         return False
     
     # Check essential packages
@@ -52,18 +52,18 @@ def main():
     for directory in directories:
         if not os.path.exists(directory):
             os.makedirs(directory)
-            print(f"✅ Created: {directory}/")
+            print(f"Created: {directory}/")
         else:
-            print(f"✅ Exists: {directory}/")
+            print(f"Exists: {directory}/")
     
     # Final verification
     print("\n" + "=" * 50)
     if all_ok:
-        print("🎉 CONSCIOUSCODE ENVIRONMENT READY!")
+        print("CONSCIOUSCODE ENVIRONMENT READY!")
         print("   You can now begin consciousness experiments!")
         print("\nNext: Run 'python test_numpy_basics.py'")
     else:
-        print("⚠️  Some packages missing. Run: pip install numpy matplotlib jupyter")
+        print("Some packages missing. Run: pip install numpy matplotlib jupyter")
     
     return all_ok
 
