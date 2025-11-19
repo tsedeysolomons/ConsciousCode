@@ -67,4 +67,22 @@ print(f"  \n Initial weights : {weights}") # Initial weights shape: [[1. 1.]
 # Real Use: Initialize random synaptic strengths
 np.random.seed(42)  # For reproducible results
 synaptic_weights = np.random.randn(4, 3) * 0.1  # Small random values 4(down) and 3(across/side (wedemon))
-print(f"Random neural connections:\n{synaptic_weights}")                                                                     
+print(f"Random neural connections:\n{synaptic_weights}")    
+
+# Real Use: Convert image pixels to neural input
+image_pixels = np.array([[[255, 0, 0], [0, 255, 0]], 
+                         [[0, 0, 255], [128, 128, 128]]])
+neural_input = image_pixels.reshape(1, -1)  # Flatten to 1D for neurons
+print(f"Image shape: {image_pixels.shape} → Neural input: {neural_input.shape}")
+
+# Real Use: Monitor brain activity levels
+neural_activations = np.random.rand(100)  # 100 neurons firing
+print(f"Max firing: {np.max(neural_activations):.3f}")
+print(f"Min firing: {np.min(neural_activations):.3f}") 
+print(f"Average firing: {np.mean(neural_activations):.3f}")
+
+# Real Use: Monitor brain activity levels
+neural_activations = np.random.rand(100)  # 100 neurons firing
+print(f"Max firing: {np.max(neural_activations):.3f}")
+print(f"Min firing: {np.min(neural_activations):.3f}") 
+print(f"Average firing: {np.mean(neural_activations):.3f}")
