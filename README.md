@@ -49,6 +49,30 @@ To understand and eventually recreate consciousness through code, starting with 
 - Consciousness assessment protocols
 - Ethical AI considerations
 
+# 🔍 Getting Started
+## For Researchers
+```
+git clone https://github.com/tsedeysolomons/ConsciousCode.git
+cd ConsciousCode
+pip install -r requirements.txt
+python setup.py verify
+```
+
+# Research Environment
+```
+jupyter lab  # Launch interactive research environment
+```
+
+# 🌟 Support This Research
+If you find this research valuable, please:
+
+⭐ Star this repository
+
+🍴 Fork and experiment
+
+🔔 Watch for updates
+
+💬 Share with interested colleagues
 
 ## 🌟 Recent Achievement
 **Day 1 Success**: Environment setup complete and first artificial neurons simulated!
